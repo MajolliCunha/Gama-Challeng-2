@@ -64,13 +64,12 @@ const renderCards = async () => {
 
           if (response.status != 201) {
             console.log(response.toString());
-            console.log(response.url);
-          }if(response.status == 404 ||response.status == 400 ) {
-            alert("Número de reservas excedido, entre em contato conosco pelo e-mail soundgarden@sg.com") 
+            console.log(response.url); 
           } else {
             form.name.value = "";
             form.email.value = "";
             form.tickets.value = "";
+            alert("Reserva Enviada! Obrigado =)")
           }
         });
       });
