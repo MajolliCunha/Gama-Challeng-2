@@ -80,7 +80,7 @@ const getData = async () => {
   try {
     const evento = await getEvent(idEvent);
     
-    console.log("fuking data -> "+evento.scheduled.substring(0, 19))
+    console.log(evento.scheduled.substring(0, 19))
 
     form.nome.value = evento.name;
     form.banner.value = evento.poster;
@@ -93,4 +93,3 @@ const getData = async () => {
   }
 };
 
-console.log(getData());
