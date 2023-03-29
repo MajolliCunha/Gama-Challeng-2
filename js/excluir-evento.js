@@ -81,6 +81,8 @@ const getData = async () => {
     const evento = await getEvent(idEvent);
     
     console.log(evento.scheduled.substring(0, 19))
+    console.log(idEvent);
+    console.log(evento.name);
 
     form.nome.value = evento.name;
     form.banner.value = evento.poster;
@@ -88,8 +90,10 @@ const getData = async () => {
     form.descricao.value = evento.description;
     form.dataevento.value = evento.scheduled.substring(0, 19);
     form.lotacao.value = evento.number_tickets;
+
   } catch (error) {
     console.log(error);
   }
 };
+console.log(getData());
 
